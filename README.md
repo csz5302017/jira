@@ -1,2 +1,0 @@
-# jira
-react hook+ts
