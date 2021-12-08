@@ -1,3 +1,4 @@
+
 export const SearchPanel = () => {
 	useEffect(() => {
 		fetch('').then(response => {
