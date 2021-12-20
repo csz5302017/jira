@@ -1,23 +1,21 @@
-
-export const SearchPanel = () => {
-	// useEffect(() => {
-	// 	fetch('').then(response => {
-
-	// 	})
-	// }, [input])
-	// const [state, setState] = useState(0)
-	// const [list, setList] = useState(0)
+export const SearchPanel = ({ param, setParam, users }) => {
+	console.log(users)
 	return (
-		<form action="">
-			<input />
-			{/* <select>
-				<option>负责人</option>
-				{list.map(item => {
-					return (
-						<option>{item}</option>
-					)
-				})}
-			</select> */}
+		<form>
+			{/* setParam(Object.assign({},param,{name:evt.target.value}))*/}
+			<input type='text' value={param.name} onChange={evt => setParam({
+				...param,
+				name: evt.target.value
+			})} />
+			<select value={param.personId} onChange={evt => setParam({
+				...param,
+				personId: evt.target.value
+			})}>
+				<option value={''}>负责人</option>
+				{users.map(user =>
+					<option value={user.id} key={user.id}>{user.name}</option>
+				)}
+			</select>
 		</form>
 	)
 }

@@ -3,7 +3,9 @@ import { ProjectListScreen } from 'screens/project-list';
 
 function App () {
   return (
-    <ProjectListScreen></ProjectListScreen>
+    <div className='App'>
+      <ProjectListScreen />
+    </div>
   );
 }
 
